@@ -4,7 +4,7 @@ const speakFunc = (input) => {
 let speakInput = new SpeechSynthesisUtterance (input); 
 //speakInput.rate = 1.2; 
 speakInput.pitch = 11; 
-speakInput.lang = "en-GB"; 
+speakInput.lang = "en-US"; 
 window.speechSynthesis.speak(speakInput); 
 } 
 window.onload = () => { 
@@ -48,6 +48,10 @@ btn.onclick = () => {
 const handleCommand= (command)=>{
     console.log(command);
 if(command.includes("Hello")|| command.includes("Hey") || command.includes("Hi")|| command.includes("Hoye"))
+    { 
+        speakFunc("Hello sir,how can i help you"); 
+    }
+else if(command.includes("Hello")|| command.includes("Hey") || command.includes("Hi")|| command.includes("Hoye"))
     { 
         speakFunc("Hello sir,how can i help you"); 
     }
